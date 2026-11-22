@@ -125,7 +125,7 @@ function pintarLista() {
     const btn = el("button", { type: "button", class: "btn btn-secondary", "aria-label": `Ver historial del lote ${l.codigo}`, text: "Ver historial" });
     btn.addEventListener("click", () => { location.hash = `#/consultar?lote=${encodeURIComponent(l.codigo)}`; });
     return el("li", { class: "card" },
-      el("h3", { text: l.codigo }),
+      el("h2", { text: l.codigo }),
       el("p", { text: `${l.zona} · cosecha ${fechaLarga(l.fechaCosecha)}` }),
       el("p", {}, el("span", { class: "tag", text: libro.ultimaEtapa(l) }), ` ${l.eventos.length} evento${l.eventos.length === 1 ? "" : "s"}`),
       btn);

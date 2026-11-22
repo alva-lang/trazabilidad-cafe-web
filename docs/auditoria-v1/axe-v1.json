@@ -1,0 +1,26 @@
+{
+  "inicio": {
+    "violaciones": [],
+    "reglasAprobadas": 31,
+    "incompletas": [
+      "color-contrast"
+    ]
+  },
+  "consultar": {
+    "violaciones": [],
+    "reglasAprobadas": 32,
+    "incompletas": []
+  },
+  "registrar": {
+    "violaciones": [],
+    "reglasAprobadas": 29,
+    "incompletas": [
+      "color-contrast"
+    ]
+  },
+  "ayuda": {
+    "violaciones": [],
+    "reglasAprobadas": 25,
+    "incompletas": []
+  }
+}

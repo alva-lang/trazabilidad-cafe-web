@@ -118,7 +118,7 @@ input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--c-
 /* Tarjetas de lotes */
 .cards { list-style: none; margin: var(--space-2) 0; padding: 0; display: grid; gap: var(--space-2); }
 .card { background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--radius); padding: var(--space-2) var(--space-3); box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 0.35rem; }
-.card h3 { margin: 0; font-size: 1.1rem; }
+.card h2 { margin: 0; font-size: 1.1rem; }
 .card p { margin: 0; color: var(--c-muted); font-size: 0.95rem; }
 .card .btn { align-self: flex-start; margin-top: 0.5rem; }
 .tag { display: inline-block; font-size: 0.8rem; font-weight: 700; padding: 0.15rem 0.6rem; border-radius: 999px; background: var(--c-sand); color: var(--c-ink); }
