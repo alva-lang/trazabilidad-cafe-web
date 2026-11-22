@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrazabilidadCafé · Consulta el recorrido de tu café</title>
+  <meta name="description" content="Consulta el origen y el recorrido de un lote de café de Chanchamayo escaneando su código QR. Datos de demostración.">
+  <meta name="theme-color" content="#2f5d46">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#/inicio" aria-label="TrazabilidadCafé, ir al inicio">
+        <img src="assets/logo.svg" alt="" width="36" height="36">
+        <span>Trazabilidad<strong>Café</strong></span>
+      </a>
+      <nav aria-label="Principal" class="main-nav">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+          Menú
+        </button>
+        <ul id="menu-principal" class="nav-list">
+          <li><a href="#/inicio" data-route="inicio">Inicio</a></li>
+          <li><a href="#/consultar" data-route="consultar">Consultar lotes</a></li>
+          <li><a href="#/registrar" data-route="registrar">Registrar</a></li>
+          <li><a href="#/ayuda" data-route="ayuda">Cómo funciona</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="banner-demo" role="note">
+    <div class="wrap">Versión de demostración: los lotes, zonas y personas son <strong>ficticios</strong>. No representan a ninguna cooperativa real.</div>
+  </div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- Vista 1: Inicio -->
+    <section id="vista-inicio" class="view" data-view="inicio" aria-labelledby="t-inicio">
+      <div class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="eyebrow">Café de Chanchamayo, Junín</p>
+            <h1 id="t-inicio">Conoce el recorrido de tu café, del cafetal a tu taza</h1>
+            <p class="lead">Escanea el código QR del paquete o escribe el código del lote. Verás de dónde viene y por qué etapas pasó, sin crear una cuenta.</p>
+            <form class="inline-search" id="form-inicio" role="search" novalidate>
+              <label for="codigo-inicio">Código del lote</label>
+              <div class="row">
+                <input id="codigo-inicio" name="codigo" type="text" inputmode="text" autocomplete="off" placeholder="Ejemplo: LOTE-2026-001" aria-describedby="ayuda-inicio">
+                <button type="submit" class="btn btn-primary">Consultar</button>
+              </div>
+              <p id="ayuda-inicio" class="hint">Lo encuentras impreso debajo del código QR.</p>
+              <p id="error-inicio" class="field-error" role="alert" hidden></p>
+            </form>
+          </div>
+          <figure class="hero-art">
+            <svg viewBox="0 0 320 240" role="img" aria-labelledby="hero-title hero-desc">
+              <title id="hero-title">Ilustración del recorrido del café</title>
+              <desc id="hero-desc">Una línea une cuatro puntos: cafetal, acopio, transporte y taza.</desc>
+              <rect width="320" height="240" rx="18" fill="#efe6d6"/>
+              <path d="M40 180 C 100 60, 160 200, 280 70" fill="none" stroke="#2f5d46" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12"/>
+              <g fill="#2f5d46"><circle cx="40" cy="180" r="14"/><circle cx="115" cy="130" r="14"/><circle cx="195" cy="150" r="14"/><circle cx="280" cy="70" r="14"/></g>
+              <g fill="#fff" font-family="system-ui,sans-serif" font-size="13" font-weight="700" text-anchor="middle"><text x="40" y="185">1</text><text x="115" y="135">2</text><text x="195" y="155">3</text><text x="280" y="75">4</text></g>
+              <g fill="#3b2416" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle"><text x="40" y="214">Cafetal</text><text x="115" y="108">Acopio</text><text x="195" y="186">Transporte</text><text x="280" y="46">Taza</text></g>
+            </svg>
+            <figcaption>Cada etapa queda registrada con fecha y responsable.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <h2>¿Cómo se usa?</h2>
+        <ol class="steps">
+          <li><span class="step-n" aria-hidden="true">1</span><h3>Escanea o escribe</h3><p>Apunta la cámara del celular al código QR del lote o escribe su código.</p></li>
+          <li><span class="step-n" aria-hidden="true">2</span><h3>Revisa el historial</h3><p>Mira la zona de origen, la fecha de cosecha y cada etapa en orden.</p></li>
+          <li><span class="step-n" aria-hidden="true">3</span><h3>Comprueba la integridad</h3><p>La app verifica que los registros no hayan sido alterados.</p></li>
+        </ol>
+
+        <h2>La red en cifras</h2>
+        <dl class="stats" aria-live="polite" id="stats">
+          <div><dt>Lotes registrados</dt><dd id="stat-lotes">…</dd></div>
+          <div><dt>Eventos de trazabilidad</dt><dd id="stat-eventos">…</dd></div>
+          <div><dt>Zonas de origen</dt><dd id="stat-zonas">…</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Vista 2: Consultar -->
+    <section id="vista-consultar" class="view" data-view="consultar" aria-labelledby="t-consultar" hidden>
+      <div class="wrap">
+        <h1 id="t-consultar">Consultar lotes</h1>
+        <p class="lead">Busca un lote por su código o explora el catálogo con los filtros.</p>
+
+        <form id="form-consulta" class="panel" role="search" novalidate>
+          <div class="grid-form">
+            <div class="field">
+              <label for="buscar">Buscar por código o zona</label>
+              <input id="buscar" name="buscar" type="search" autocomplete="off" placeholder="Ejemplo: Villa Rica">
+            </div>
+            <div class="field">
+              <label for="filtro-zona">Zona de procedencia</label>
+              <select id="filtro-zona" name="zona"><option value="">Todas las zonas</option></select>
+            </div>
+            <div class="field">
+              <label for="filtro-etapa">Última etapa registrada</label>
+              <select id="filtro-etapa" name="etapa"><option value="">Todas las etapas</option></select>
+            </div>
+          </div>
+          <div class="row-actions">
+            <button type="button" class="btn btn-secondary" id="limpiar-filtros">Limpiar filtros</button>
+            <p id="conteo-resultados" class="count" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <div id="estado-carga" class="notice" role="status">Cargando lotes…</div>
+        <ul id="lista-lotes" class="cards" aria-label="Lotes disponibles"></ul>
+
+        <article id="detalle-lote" class="detail" tabindex="-1" aria-labelledby="detalle-titulo" hidden>
+          <div class="detail-head">
+            <div>
+              <p class="eyebrow">Lote</p>
+              <h2 id="detalle-titulo"></h2>
+            </div>
+            <button type="button" class="btn btn-secondary" id="cerrar-detalle">Cerrar detalle</button>
+          </div>
+          <div class="detail-grid">
+            <div>
+              <dl class="facts">
+                <div><dt>Zona de procedencia</dt><dd id="d-zona"></dd></div>
+                <div><dt>Fecha de cosecha</dt><dd id="d-cosecha"></dd></div>
+                <div><dt>Eventos registrados</dt><dd id="d-n"></dd></div>
+              </dl>
+              <p id="d-integridad" class="badge" role="status"></p>
+            </div>
+            <figure class="qr-box">
+              <div id="d-qr" class="qr" role="img"></div>
+              <figcaption>
+                <span id="d-qr-texto"></span>
+                <button type="button" class="btn btn-secondary btn-small" id="descargar-qr">Descargar QR</button>
+              </figcaption>
+            </figure>
+          </div>
+          <h3>Historial de eventos</h3>
+          <ol id="d-eventos" class="timeline"></ol>
+        </article>
+      </div>
+    </section>
+
+    <!-- Vista 3: Registrar -->
+    <section id="vista-registrar" class="view" data-view="registrar" aria-labelledby="t-registrar" hidden>
+      <div class="wrap">
+        <h1 id="t-registrar">Registrar lotes y eventos</h1>
+        <p class="lead">Esta zona es para personal autorizado de la cooperativa. Elige un perfil de demostración para probar los permisos.</p>
+
+        <div class="panel">
+          <div class="field narrow">
+            <label for="perfil">Perfil de demostración</label>
+            <select id="perfil" name="perfil">
+              <option value="consultor">Consultor (solo lectura)</option>
+              <option value="registrador" selected>Registrador autorizado</option>
+              <option value="administrador">Administrador</option>
+            </select>
+          </div>
+          <p id="perfil-texto" class="hint" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="two-col">
+          <form id="form-lote" class="panel" novalidate aria-labelledby="h-lote">
+            <h2 id="h-lote">Registrar un lote nuevo</h2>
+            <div class="field">
+              <label for="lote-codigo">Código del lote <span class="req" aria-hidden="true">*</span></label>
+              <input id="lote-codigo" name="codigo" type="text" autocomplete="off" required aria-describedby="lote-codigo-ayuda lote-codigo-error" placeholder="LOTE-2026-009">
+              <p id="lote-codigo-ayuda" class="hint">Solo letras, números y guiones. No puede repetirse.</p>
+              <p id="lote-codigo-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="lote-zona">Zona de procedencia <span class="req" aria-hidden="true">*</span></label>
+              <select id="lote-zona" name="zona" required aria-describedby="lote-zona-error"><option value="">Selecciona una zona</option></select>
+              <p id="lote-zona-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="lote-fecha">Fecha de cosecha <span class="req" aria-hidden="true">*</span></label>
+              <input id="lote-fecha" name="fecha" type="date" required aria-describedby="lote-fecha-error">
+              <p id="lote-fecha-error" class="field-error" hidden></p>
+            </div>
+            <p class="req-note"><span aria-hidden="true">*</span> Campo obligatorio</p>
+            <button type="submit" class="btn btn-primary">Registrar lote</button>
+            <p id="lote-resultado" class="form-result" role="status" aria-live="polite" hidden></p>
+          </form>
+
+          <form id="form-evento" class="panel" novalidate aria-labelledby="h-evento">
+            <h2 id="h-evento">Agregar un evento a un lote</h2>
+            <div class="field">
+              <label for="evento-lote">Lote <span class="req" aria-hidden="true">*</span></label>
+              <select id="evento-lote" name="lote" required aria-describedby="evento-lote-error"><option value="">Selecciona un lote</option></select>
+              <p id="evento-lote-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="evento-tipo">Etapa <span class="req" aria-hidden="true">*</span></label>
+              <select id="evento-tipo" name="tipo" required aria-describedby="evento-tipo-error"><option value="">Selecciona una etapa</option></select>
+              <p id="evento-tipo-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="evento-fecha">Fecha del evento <span class="req" aria-hidden="true">*</span></label>
+              <input id="evento-fecha" name="fecha" type="date" required aria-describedby="evento-fecha-error">
+              <p id="evento-fecha-error" class="field-error" hidden></p>
+            </div>
+            <p class="req-note"><span aria-hidden="true">*</span> Campo obligatorio</p>
+            <button type="submit" class="btn btn-primary">Agregar evento</button>
+            <p id="evento-resultado" class="form-result" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h2>Registro de operaciones de esta sesión</h2>
+          <p class="hint">Cada intento queda anotado, también los rechazados.</p>
+          <ul id="bitacora" class="log" aria-live="polite"><li class="muted">Aún no hay operaciones.</li></ul>
+          <button type="button" class="btn btn-secondary" id="restablecer">Restablecer datos de demostración</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vista 4: Ayuda -->
+    <section id="vista-ayuda" class="view" data-view="ayuda" aria-labelledby="t-ayuda" hidden>
+      <div class="wrap prose">
+        <h1 id="t-ayuda">Cómo funciona</h1>
+        <p class="lead">TrazabilidadCafé muestra los registros de cada lote y comprueba que su historial no fue alterado.</p>
+
+        <h2>Qué verifica la app</h2>
+        <p>Cada evento guarda una huella digital (hash SHA-256) que incluye la huella del evento anterior. Si alguien cambia un dato antiguo, las huellas dejan de coincidir y la app lo avisa con el mensaje «Historial alterado».</p>
+
+        <h2>Reglas que se aplican al registrar</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Reglas de negocio tomadas del contrato inteligente</caption>
+            <thead><tr><th scope="col">Regla</th><th scope="col">Qué significa</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Código único</th><td>No pueden existir dos lotes con el mismo código.</td></tr>
+              <tr><th scope="row">Campos obligatorios</th><td>Un lote exige código, zona y fecha de cosecha. Un evento exige etapa y fecha.</td></tr>
+              <tr><th scope="row">Lote existente</th><td>Solo se agregan eventos a lotes ya registrados.</td></tr>
+              <tr><th scope="row">Permisos</th><td>Solo el administrador y los registradores autorizados pueden escribir. Cualquier persona puede consultar.</td></tr>
+              <tr><th scope="row">Sin borrado</th><td>Los eventos confirmados no se editan ni se eliminan.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Límites de esta versión</h2>
+        <ul>
+          <li>Funciona en modo demostración: los datos se guardan en tu navegador y no en una blockchain real.</li>
+          <li>La integridad se comprueba en tu navegador. Una red blockchain pública permitiría verificarla entre varias partes.</li>
+          <li>Que un dato esté bien encadenado no prueba que sea verdadero: depende de quien lo registra.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>TrazabilidadCafé · Proyecto del curso de Desarrollo Front-End 2026-2 · Versión 1</p>
+      <p>Basado en el prototipo de trazabilidad con blockchain del curso de Blockchain. Datos ficticios.</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/vendor/qrcode.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
