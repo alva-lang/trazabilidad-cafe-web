@@ -1,0 +1,13 @@
+{
+  "name": "trazabilidad-cafe-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Interfaz web de trazabilidad del café (proyecto final Desarrollo Front-End 2026-2)",
+  "scripts": {
+    "start": "npx --yes serve . -l 5173",
+    "datos": "node scripts/generar-datos.mjs",
+    "test": "node --test"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "nota": "Datos ficticios para demostración",
+  "lotes": [
+    {
+      "codigo": "LOTE-2026-001",
+      "zona": "Villa Rica",
+      "fechaCosecha": "2026-04-12",
+      "eventos": [
+        {
+          "tipo": "Cosecha",
+          "fecha": "2026-04-12",
+          "responsable": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+          "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+          "huella": "b389bd95c315a07138bd70661b8494dabfc52e5774c0fc52de0b1bab89a4f4d0"
+        },
+        {
+          "tipo": "Acopio",
+          "fecha": "2026-04-14",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "b389bd95c315a07138bd70661b8494dabfc52e5774c0fc52de0b1bab89a4f4d0",
+          "huella": "04364b4d652e8cc1e9f2c07d0960a64b3f45cfec089d49394f18a414b6926ce9"
+        },
+        {
+          "tipo": "Procesamiento",
+          "fecha": "2026-04-18",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "04364b4d652e8cc1e9f2c07d0960a64b3f45cfec089d49394f18a414b6926ce9",
+          "huella": "92707e6145fffc634e95ae8805c1e4f4300d7d9d9f54d38703e8e35167115aa6"
+        },
+        {
+          "tipo": "Almacenamiento",
+          "fecha": "2026-04-25",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "92707e6145fffc634e95ae8805c1e4f4300d7d9d9f54d38703e8e35167115aa6",
+          "huella": "c8f05508472bcffc5b31881040a5ed30e1df7367fe68e175e066211a36725ed0"
+        },
+        {
+          "tipo": "Transporte",
+          "fecha": "2026-05-03",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "c8f05508472bcffc5b31881040a5ed30e1df7367fe68e175e066211a36725ed0",
+          "huella": "1455780520a03166c1343e7be054c58f9e69085c6b95610df0d98ebd5e14bd35"
+        },
+        {
+          "tipo": "Entrega",
+          "fecha": "2026-05-06",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "1455780520a03166c1343e7be054c58f9e69085c6b95610df0d98ebd5e14bd35",
+          "huella": "927269018b6c239e6e8fc5db780cedf9d257ecf285e8390c5300787d50435719"
+        }
+      ]
+    },
+    {
+      "codigo": "LOTE-2026-002",
+      "zona": "Pichanaqui",
+      "fechaCosecha": "2026-05-02",
+      "eventos": [
+        {
+          "tipo": "Cosecha",
+          "fecha": "2026-05-02",
+          "responsable": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+          "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+          "huella": "737d8bd2d40c9d649d8deb8d8350edcd00f79d58359ab533634bead908a88016"
+        },
+        {
+          "tipo": "Acopio",
+          "fecha": "2026-05-04",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "737d8bd2d40c9d649d8deb8d8350edcd00f79d58359ab533634bead908a88016",
+          "huella": "58c9a132e94d1f99b6dae389dbbb922e6faad21477060b4929f189a58e4103bb"
+        },
+        {
+          "tipo": "Procesamiento",
+          "fecha": "2026-05-09",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "58c9a132e94d1f99b6dae389dbbb922e6faad21477060b4929f189a58e4103bb",
+          "huella": "3a2d1d9a75ed522d144288ad6ffee4ee89119f2cd8b3640c281eafa4795a30c6"
+        }
+      ]
+    },
+    {
+      "codigo": "LOTE-2026-003",
+      "zona": "San Ramón",
+      "fechaCosecha": "2026-05-20",
+      "eventos": [
+        {
+          "tipo": "Cosecha",
+          "fecha": "2026-05-20",
+          "responsable": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+          "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+          "huella": "d9e2ed4acdc2bf3d4fa295254e175371d0d3245248bca3bb01d5b0c241fbc2cb"
+        },
+        {
+          "tipo": "Acopio",
+          "fecha": "2026-05-22",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "d9e2ed4acdc2bf3d4fa295254e175371d0d3245248bca3bb01d5b0c241fbc2cb",
+          "huella": "e554d8f6cb534ef78b750ab6a4e62114571f9a7cc5edc32f52614cced58dc560"
+        },
+        {
+          "tipo": "Procesamiento",
+          "fecha": "2026-05-27",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "e554d8f6cb534ef78b750ab6a4e62114571f9a7cc5edc32f52614cced58dc560",
+          "huella": "b6fd433876f9a40606dda6d7573254abc64a782bb7dfd89da59241cf1ce6551a"
+        },
+        {
+          "tipo": "Almacenamiento",
+          "fecha": "2026-06-03",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "b6fd433876f9a40606dda6d7573254abc64a782bb7dfd89da59241cf1ce6551a",
+          "huella": "05b3d8fd0c451fc2a7f1c12a8bc124c609d14dd0626527374e4fa3b950360bcc"
+        }
+      ]
+    },
+    {
+      "codigo": "LOTE-2026-004",
+      "zona": "Perené",
+      "fechaCosecha": "2026-06-08",
+      "eventos": [
+        {
+          "tipo": "Cosecha",
+          "fecha": "2026-06-08",
+          "responsable": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+          "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+          "huella": "ba7a0ecf441bffac32e92e2d9574e16e39b106a338300f6244b347eddba50c04"
+        },
+        {
+          "tipo": "Acopio",
+          "fecha": "2026-06-10",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "ba7a0ecf441bffac32e92e2d9574e16e39b106a338300f6244b347eddba50c04",
+          "huella": "9750f74f1cb8d4fffaea743f7c04c782f873cde430b422481c3bd6697f94f71d"
+        }
+      ]
+    },
+    {
+      "codigo": "LOTE-2026-005",
+      "zona": "La Merced",
+      "fechaCosecha": "2026-06-25",
+      "eventos": [
+        {
+          "tipo": "Cosecha",
+          "fecha": "2026-06-25",
+          "responsable": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+          "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+          "huella": "8d1ae7bc38ba540d646ea2df78f3220d449c14279f4ba20ab23cb813bc67137d"
+        },
+        {
+          "tipo": "Acopio",
+          "fecha": "2026-06-27",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "8d1ae7bc38ba540d646ea2df78f3220d449c14279f4ba20ab23cb813bc67137d",
+          "huella": "632676893d7555f989f1d754c1f2bb8e7dc768a27ae116a698a06dbe2c0e7384"
+        },
+        {
+          "tipo": "Procesamiento",
+          "fecha": "2026-07-02",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "632676893d7555f989f1d754c1f2bb8e7dc768a27ae116a698a06dbe2c0e7384",
+          "huella": "c98924e6edeb8c89abf8098092d9c785d95153a79cc12834c75176a78346e228"
+        },
+        {
+          "tipo": "Almacenamiento",
+          "fecha": "2026-07-09",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "c98924e6edeb8c89abf8098092d9c785d95153a79cc12834c75176a78346e228",
+          "huella": "4d58dacf358364d5790ccbeb6bb98c18dcf3ddcf7a36038a0b02afd4d85662f2"
+        },
+        {
+          "tipo": "Transporte",
+          "fecha": "2026-07-15",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "4d58dacf358364d5790ccbeb6bb98c18dcf3ddcf7a36038a0b02afd4d85662f2",
+          "huella": "3a919c62c171955c04d2372395acc3edff5736fe2f9564a87bf322dc8df9b251"
+        }
+      ]
+    },
+    {
+      "codigo": "LOTE-2026-006",
+      "zona": "Villa Rica",
+      "fechaCosecha": "2026-07-14",
+      "eventos": [
+        {
+          "tipo": "Cosecha",
+          "fecha": "2026-07-14",
+          "responsable": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+          "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+          "huella": "56d9164f14b4b47e8184fe577f1693ba12e0c5758416862368657d87dc6e45b3"
+        }
+      ]
+    },
+    {
+      "codigo": "LOTE-2026-007",
+      "zona": "San Luis de Shuaro",
+      "fechaCosecha": "2026-08-03",
+      "eventos": [
+        {
+          "tipo": "Cosecha",
+          "fecha": "2026-08-03",
+          "responsable": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+          "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+          "huella": "a3ceac9918fad9492d26960e7fc56de1eaa144251175df2ef3c4b8b9a77fdd3e"
+        },
+        {
+          "tipo": "Acopio",
+          "fecha": "2026-08-05",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "a3ceac9918fad9492d26960e7fc56de1eaa144251175df2ef3c4b8b9a77fdd3e",
+          "huella": "b4dae60aaea35ddd972a445cc2337ce91aff8447d5ae23b89a115889fd7d8a50"
+        },
+        {
+          "tipo": "Procesamiento",
+          "fecha": "2026-08-11",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "b4dae60aaea35ddd972a445cc2337ce91aff8447d5ae23b89a115889fd7d8a50",
+          "huella": "8cbf9d10e84e91c16b18449bdc746a5b6ac561d8e9b5c24af85cc7d3f36b20bd"
+        },
+        {
+          "tipo": "Almacenamiento",
+          "fecha": "2026-08-18",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "8cbf9d10e84e91c16b18449bdc746a5b6ac561d8e9b5c24af85cc7d3f36b20bd",
+          "huella": "8097f3ce14ede1bc73125b00f9708a15c75d1f5cd5aa08e8824b9b6afaf05dad"
+        },
+        {
+          "tipo": "Transporte",
+          "fecha": "2026-08-26",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "8097f3ce14ede1bc73125b00f9708a15c75d1f5cd5aa08e8824b9b6afaf05dad",
+          "huella": "002f8c95de5eb3617924cf69d1cbdc17be6a922e307b8b0020c3b2a12997bfe6"
+        },
+        {
+          "tipo": "Entrega",
+          "fecha": "2026-08-29",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "002f8c95de5eb3617924cf69d1cbdc17be6a922e307b8b0020c3b2a12997bfe6",
+          "huella": "3960ccef6e4bd0a02e5243a1af754e1fd18c3e561f88df0f44e28558837b4ff8"
+        }
+      ]
+    },
+    {
+      "codigo": "LOTE-2026-008",
+      "zona": "Vitoc",
+      "fechaCosecha": "2026-09-09",
+      "eventos": [
+        {
+          "tipo": "Cosecha",
+          "fecha": "2026-09-09",
+          "responsable": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+          "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+          "huella": "5ad05bbe9168769b46fc04c9ca5f392e628498663c15ee966069d553d2d5f866"
+        },
+        {
+          "tipo": "Acopio",
+          "fecha": "2026-09-11",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "5ad05bbe9168769b46fc04c9ca5f392e628498663c15ee966069d553d2d5f866",
+          "huella": "263624754deed1cff0a85e4e31d4d4812f47c424ae96edf90bbae764d2223bfd"
+        },
+        {
+          "tipo": "Procesamiento",
+          "fecha": "2026-09-16",
+          "responsable": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "prev": "263624754deed1cff0a85e4e31d4d4812f47c424ae96edf90bbae764d2223bfd",
+          "huella": "6bff49d3c8ea792829edc0fcb6e79be9ab0f1a5a8512eb8bbedcee42b4e9ec1e"
+        }
+      ]
+    }
+  ]
+}
